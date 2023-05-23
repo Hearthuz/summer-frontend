@@ -1,0 +1,11 @@
+version: "1.0"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PUBLIC_URL
+    ports:
+      - 8080:80
