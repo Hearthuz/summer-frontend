@@ -7,4 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build docker image
-        runs: docker build -t hearthuz/summer-frontend:latest .
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: hearthuz/summer-frontend:latest
