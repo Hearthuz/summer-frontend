@@ -1,11 +1,6 @@
 name: Docker Image CI
-run-name: ${{ github.actor }} is psushing
-on:
-  push:
-    branch: main
-  pull_request:
-    branch: main
-
+run-name: ${{ github.actor }} is pushing
+on: [push]
 jobs:
   builds:
     runs-on: ubuntu-latest
