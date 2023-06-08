@@ -1,0 +1,17 @@
+name: Docker Image CI
+
+on:
+  push:
+    branch: main
+  pull_request:
+    branch: main
+
+  jobs:
+    builds:
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v2
+
+        - name: Build docker image
+          runs: docker build -t hearthuz/summer-frontend:latest .

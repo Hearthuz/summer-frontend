@@ -1,11 +1,9 @@
-version: "1.0"
+version: "0.1"
 
 services:
-  frontend:
+  next-js:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        - PUBLIC_URL
     ports:
       - 8080:80
